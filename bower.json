@@ -1,0 +1,25 @@
+{
+  "name": "streak",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Michael Gee <michaelgee221@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#2.0.0-rc.5",
+    "app-layout": "PolymerElements/app-layout#2.0-preview",
+    "iron-icon": "PolymerElements/iron-icon#2.0-preview",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg#2.0-preview"
+  }
+}
