@@ -5,13 +5,15 @@ import { HttpModule } from '@angular/http';
 
 // Polymer Modules
 import { PolymerModule } from '@codebakery/origami';
-import { AppElementsModule } from '@codebakery/origami/lib/collections';
+import { AppElementsModule, PaperElementsModule, IronElementsModule } from '@codebakery/origami/lib/collections';
 
 import { AppComponent } from './app.component';
+import { TodoBoxComponent } from './todo-box/todo-box.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodoBoxComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   imports: [
@@ -19,7 +21,9 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     //Polymer Modules
-    AppElementsModule
+    AppElementsModule,
+    PaperElementsModule,
+    IronElementsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

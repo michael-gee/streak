@@ -1,0 +1,22 @@
+<!-- POLYMER IMPORT -->
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+
+<dom-module id="test-element">
+  <template>
+
+    <h1>My first Polymer/Angular custom element!!</h1>
+
+  </template>
+
+  <script>
+
+    class TestElement extends Polymer.Element {
+
+      static get is() { return 'test-element' };
+
+    }
+
+    window.customElements.define(TestElement.is, TestElement);
+
+  </script>
+</dom-module>
