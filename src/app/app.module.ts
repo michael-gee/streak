@@ -3,12 +3,20 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-// Polymer Modules
+//AngularFire2
+import { AngularFireModule } from 'angularfire2';
+import { firebaseConfig } from './../environments/firebase.config';
+
+// Polymer
 import { PolymerModule } from '@codebakery/origami';
 import { AppElementsModule, PaperElementsModule, IronElementsModule } from '@codebakery/origami/lib/collections';
 
+//Components
 import { AppComponent } from './app.component';
 import { TodoBoxComponent } from './todo-box/todo-box.component';
+
+//providers
+import { AuthService } from './providers/auth.service';
 
 @NgModule({
   declarations: [
@@ -23,9 +31,11 @@ import { TodoBoxComponent } from './todo-box/todo-box.component';
     //Polymer Modules
     AppElementsModule,
     PaperElementsModule,
-    IronElementsModule
+    IronElementsModule,
+    //firebase
+    AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ AuthService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -14,6 +14,9 @@
 
       static get is() { return 'test-element' };
 
+      login() {
+        console.log("Hello!");
+      }
     }
 
     window.customElements.define(TestElement.is, TestElement);
