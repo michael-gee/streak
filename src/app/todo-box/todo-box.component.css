@@ -15,17 +15,9 @@ a {
     text-decoration: underline;
   }
 
-#padding50 {
-  padding-top: 50px;
-}
-
 #todo-box {
-  height: 75%;
-  width: 50%;
   margin: 0 auto;
-  border: 1px solid #ccc;
-  border-radius: 1%;
-  box-shadow: 0 2px 10px rgba(0,0,0,.2);
+  overflow: auto;
 }
 
 app-toolbar {
@@ -57,25 +49,30 @@ app-toolbar {
   justify-content: center;
   align-items: center;
   text-align: center;
-  overflow: auto;
   padding: 0 35px;
-  height: calc(100% - 50px);
+  width: 50%;
+  margin: 0 auto;
 }
-  #h1-icon {
-    height: 40px;
-    width: 40px;
-    padding-bottom: 5px;
-  }
-  #calender-img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    margin-bottom: 10px;
-    border: 2px solid red;
-  }
   #todo-content p {
     margin: 10px 0;
   }
+
+/* IF USER NOT LOGGED IN */
+#calender-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  margin: 10px 0;
+  border: 2px solid red;
+}
+
+/* IF USER IS LOGGED IN */
+paper-fab {
+  background-color: red;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 780px) {
